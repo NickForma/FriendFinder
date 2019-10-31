@@ -1,6 +1,12 @@
+let path = require('path');
 
 
-app.get('/api/survey', (req, res) => {
-    return res.json(survey)
-});
 
+module.exports = (app) => {
+    app.get('/api/friends', (req, res) => {
+        res.json(friends)
+    })
+
+   
+
+}
