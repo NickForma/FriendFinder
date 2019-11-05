@@ -17,7 +17,6 @@ $(document).ready(function() {
   questions.forEach((elem, index) => {
     $(".questionBox").append(`
     <br>
-      <div class="questionBox">
       <div class="dropdown">
       <h3>Question ${index + 1}</h3>
       <p>${elem}</p>
@@ -32,15 +31,13 @@ $(document).ready(function() {
           Select An Option
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">1 Strongly Disagree</a>
-          <a class="dropdown-item" href="#">2 Disagree</a>
-          <a class="dropdown-item" href="#">3 Don't Care</a>
-          <a class="dropdown-item" href="#">4 Agree</a>
-          <a class="dropdown-item" href="#">5 Strongly Agree</a>
+          <a class="dropdown-item ans1" href="#">1 Strongly Disagree</a>
+          <a class="dropdown-item ans2" href="#">2 Disagree</a>
+          <a class="dropdown-item ans3" href="#">3 Don't Care</a>
+          <a class="dropdown-item ans4" href="#">4 Agree</a>
+          <a class="dropdown-item ans5" href="#">5 Strongly Agree</a>
         </div>
       </div>
-    </div>
-
       `);
   });
 });
