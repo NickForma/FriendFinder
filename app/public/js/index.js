@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
 
+  let answers = [];
+
   let questions = [
     "You enjoy vibrant social events with lots of people.",
     "You often spend time exploring unrealistic yet intriguing ideas.",
@@ -17,8 +19,9 @@ $(document).ready(function() {
   questions.forEach((elem, index) => {
     $(".questionBox").append(`
     <br>
-      <div class="dropdown">
-      <h3>Question ${index + 1}</h3>
+    <div class="dropdown">
+    <h3>Question ${index + 1}</h3>
+    <p class="choosing">Choose from 1 for Strongly Disagree to 5 for Strongly Agree </p>
       <p>${elem}</p>
         <button
           class="btn btn-secondary dropdown-toggle"
@@ -31,13 +34,22 @@ $(document).ready(function() {
           Select An Option
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item ans1" href="#">1 Strongly Disagree</a>
-          <a class="dropdown-item ans2" href="#">2 Disagree</a>
-          <a class="dropdown-item ans3" href="#">3 Don't Care</a>
-          <a class="dropdown-item ans4" href="#">4 Agree</a>
-          <a class="dropdown-item ans5" href="#">5 Strongly Agree</a>
+          <a class="dropdown-item ans1${index}" href="#">1</a>
+          <a class="dropdown-item ans2${index}" href="#">2</a>
+          <a class="dropdown-item ans3${index}" href="#">3</a>
+          <a class="dropdown-item ans4${index}" href="#">4</a>
+          <a class="dropdown-item ans5${index}" href="#">5</a>
         </div>
       </div>
       `);
+  });
+
+  $(".dropdown-item").click(data => {
+    data.preventDefault();
+    // console.log(data, data.value, data.target.innerHTML);
+    answers.push(data.target.innerHTML);
+
+    console.log(data.target.innerHTML);
+    console.log(answers);
   });
 });
