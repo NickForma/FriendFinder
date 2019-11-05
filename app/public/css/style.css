@@ -17,3 +17,13 @@ input {
   color: grey;
   font-size: 12px;
 }
+
+.btn-success {
+  margin: auto;
+  text-align: center;
+}
+
+.btn-success:hover {
+  color: red;
+  size: 200%;
+}

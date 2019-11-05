@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  //   let friends = require("/Users/nickf/School/HW/Friendfinder/FriendFinder/app/data/friends");
+  //   console.log(friends[0].name);
+
   $(".dropdown-toggle").dropdown();
 
   let answers = [];
@@ -24,7 +27,7 @@ $(document).ready(function() {
     <p class="choosing">Choose from 1 for Strongly Disagree to 5 for Strongly Agree </p>
       <p>${elem}</p>
         <button
-          class="btn btn-secondary dropdown-toggle"
+          class="btn btn-warning dropdown-toggle"
           type="button"
           id="dropdownMenuButton"
           data-toggle="dropdown"
@@ -51,5 +54,10 @@ $(document).ready(function() {
 
     console.log(data.target.innerHTML);
     console.log(answers);
+  });
+
+  $(".btn-success").click(data => {
+    console.log(answers);
+    alert(answers);
   });
 });

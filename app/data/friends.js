@@ -1,4 +1,4 @@
-let friends = [
+module.exports.friends = [
   {
     name: "Donald",
     photo:

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/NickForma/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "require": "^2.4.20",
+    "requirer": "0.0.4"
   }
 }
