@@ -1,5 +1,12 @@
 $(document).ready(function() {
+  let userProps = [];
   $(".start").click(res => {
+    let username = $(".username").val();
+    let userphoto = $(".userphoto").val();
+
+    userProps.push(username, userphoto);
+    console.log(userProps);
+
     location.href = "../survey.html";
   });
 
@@ -64,7 +71,7 @@ $(document).ready(function() {
   });
 
   $(".findFriend").click(data => {
-    console.log(answers);
+    console.log(answers, userProps);
     alert(answers);
   });
 });
