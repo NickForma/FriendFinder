@@ -1,6 +1,13 @@
 $(document).ready(function() {
-  //   let friends = require("/Users/nickf/School/HW/Friendfinder/FriendFinder/app/data/friends");
-  //   console.log(friends[0].name);
+  $(".start").click(res => {
+    location.href = "../survey.html";
+  });
+
+  fetch("/friends.json")
+    .then(res => res.json())
+    .then(result => {
+      console.log(result);
+    });
 
   $(".dropdown-toggle").dropdown();
 
@@ -56,7 +63,7 @@ $(document).ready(function() {
     console.log(answers);
   });
 
-  $(".btn-success").click(data => {
+  $(".findFriend").click(data => {
     console.log(answers);
     alert(answers);
   });
