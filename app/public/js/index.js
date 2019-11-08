@@ -1,10 +1,11 @@
 $(document).ready(function() {
-  let userProps = [];
   $(".start").click(res => {
-    let username = $(".username").val();
-    let userphoto = $(".userphoto").val();
+    var user = {
+      name: $(".username").val(),
+      photo: $(".userphoto").val()
+    };
+    userProps.push(user);
 
-    userProps.push(username, userphoto);
     console.log(userProps);
 
     location.href = "../survey.html";
@@ -13,11 +14,12 @@ $(document).ready(function() {
   fetch("/friends.json")
     .then(res => res.json())
     .then(result => {
-      console.log(result);
+      friends.push(result);
     });
 
   $(".dropdown-toggle").dropdown();
-
+  let friends = [];
+  let userProps = [];
   let answers = [];
 
   let questions = [
@@ -70,8 +72,9 @@ $(document).ready(function() {
     console.log(answers);
   });
 
-  $(".findFriend").click(data => {
-    console.log(answers, userProps);
-    alert(answers);
+  $(".findFriend").click((data, userProps) => {
+    console.log(answers, userProps, friends);
+
+    console.log(answers);
   });
 });
