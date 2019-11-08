@@ -21,6 +21,7 @@ $(document).ready(function() {
   let friends = [];
   let userProps = [];
   let answers = [];
+  let difference = [];
 
   let questions = [
     "You enjoy vibrant social events with lots of people.",
@@ -73,8 +74,20 @@ $(document).ready(function() {
   });
 
   $(".findFriend").click((data, userProps) => {
-    console.log(answers, userProps, friends);
-
+    if (answers.length !== 10) {
+      return alert(`You didn't answer all the questions! Make sure you answer them all!`);
+    } else {
+      friends[0].forEach(elem => {
+        for (var i = 0; answers.length > i; i++) {
+          if (answers[i] === friends[0][1].scores[i]) {
+            difference.push(0);
+          } else if (answers[i] != friends[0][1].scores[i]) {
+            difference.push(answers[i] - friends[0][1].scores[i]);
+          }
+        }
+      });
+    }
+    console.log(difference);
     console.log(answers);
   });
 });
