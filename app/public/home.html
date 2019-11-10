@@ -31,20 +31,39 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <h1>About You</h1>
+  <body class="homeContainer">
+    <div class="container">
+      <h1>About You</h1>
 
-    <div class="userForm">
-      <form>
-        Your Name: <br />
-        <input class="username" type="text" name="name" />
-        <br />
-        A URL to a photo of you: <br />
-        <input class="userphoto" type="text" name="photo" />
-        <button class="btn btn-success start" type="button">
-          Lets's Get Started!
-        </button>
-      </form>
+      <div class="userForm">
+        <!-- GIF -->
+        <!-- INPUT FORM -->
+        <form>
+          Your Name: <br />
+          <input class="username" type="text" name="name" />
+          <br />
+          A URL to a photo of you: <br />
+          <input class="userphoto" type="text" name="photo" />
+          <button class="btn btn-success start" type="button">
+            Lets's Get Started!
+          </button>
+          <div class="gif">
+            <iframe
+              src="https://giphy.com/embed/3orieM2yXrt2kK4B4Q"
+              width="250"
+              height="200"
+              frameBorder="0"
+              class="giphy-embed"
+              allowFullScreen
+            ></iframe>
+            <!-- <p>
+              <a
+                href="https://giphy.com/gifs/season-2-the-simpsons-2x9-3orieM2yXrt2kK4B4Q"
+              ></a>
+            </p> -->
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="./js/index.js"></script>

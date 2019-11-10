@@ -2,14 +2,22 @@
   text-align: center;
 }
 
+.homeContainer {
+  background-color: cyan;
+}
+
 .userForm {
-  border-style: groove;
+  width: 100%;
+  /* border-style: groove; */
+  border-radius: 25px;
   margin: 10px;
   padding: 5px 10px;
+  background-color: salmon;
 }
 .userForm,
 input {
-  width: 90%;
+  width: 100%;
+  float: left;
 }
 
 .choosing {
@@ -26,4 +34,16 @@ input {
 .btn-success:hover {
   color: red;
   size: 200%;
+}
+
+.gif {
+  display: block;
+  margin: auto;
+  padding: auto;
+  width: 50%;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
 }
