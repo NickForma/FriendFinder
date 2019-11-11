@@ -2,10 +2,10 @@ let path = require("path");
 
 module.exports = app => {
   app.get("/", (req, res) => {
-    res.json(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
   app.get("/survey", (req, res) => {
-    res.json(path.join(__dirname, "../public/survey.html"));
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 };
